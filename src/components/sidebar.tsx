@@ -42,7 +42,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     if (progress === 100) {
       // Use the correct path for files in the public folder
       const link = document.createElement('a');
-      link.href = '/Teshav_Resume_D.pdf';
+      link.href = `${import.meta.env.BASE_URL}Teshav_Resume_D.pdf`;
       link.download = 'Teshav_Resume_D.pdf';
       link.target = '_blank';
       link.rel = 'noopener noreferrer';

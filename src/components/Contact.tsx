@@ -174,13 +174,13 @@ const Contact: React.FC = () => {
                 >
                   {/* Light mode icon */}
                   <img
-                    src="/kaggle_logo_light.png"
+                    src={`${import.meta.env.BASE_URL}kaggle_logo_light.png`}
                     alt="Kaggle"
                     className="w-4 h-4 dark:hidden transition-transform duration-300 group-hover:scale-125"
                   />
                   {/* Dark mode icon */}
                   <img
-                    src="/kaggle_logo_dark.png"
+                    src={`${import.meta.env.BASE_URL}kaggle_logo_dark.png`}
                     alt="Kaggle"
                     className="w-4 h-4 hidden dark:block transition-transform duration-300 group-hover:scale-125"
                   />
