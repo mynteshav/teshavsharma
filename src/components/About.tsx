@@ -31,7 +31,7 @@ const About: React.FC = () => {
           >
             <div className="absolute -inset-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg opacity-75 blur-lg animate-pulse group-hover:scale-105 transition-transform duration-300 z-0"></div>
             <img 
-              src="/Remove background project.png" 
+              src={`${import.meta.env.BASE_URL}Remove background project.png`} 
               alt="Teshav working with data" 
               className="relative z-10 rounded-lg shadow-lg w-full h-auto border-4 border-gray-800 transition-transform duration-300 group-hover:scale-105"
             />

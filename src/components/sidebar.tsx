@@ -40,9 +40,12 @@ const Sidebar: React.FC<SidebarProps> = ({
 
   useEffect(() => {
     if (progress === 100) {
+      // Use the correct path for files in the public folder
       const link = document.createElement('a');
-      link.href = 'public/Teshav_Resume_D.pdf';
+      link.href = '/Teshav_Resume_D.pdf';
       link.download = 'Teshav_Resume_D.pdf';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -98,7 +101,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         <div className="relative w-24 h-24 mx-auto mb-4">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 animate-pulse blur-lg opacity-50"></div>
           <img
-            src="/Remove background project (1).png"
+            src={`${import.meta.env.BASE_URL}Remove background project (1).png`}
             alt="Profile"
             className="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800"
           />

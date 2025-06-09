@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       title: 'Job Market & Salary Trends',
       category: 'data-analysis',
       description: 'Designed an interactive Power BI dashboard to analyze global job market trends across 14.2K+ job postings from 2020–2024.',
-      image: '/Capture.PNG',
+      image: `${import.meta.env.BASE_URL}Capture.PNG`,
       technologies: ['Power BI','DAX'],
       github:"https://github.com/mynteshav/Job-Market-Salary-Trends-Dashboard-Power-BI-?tab=readme-ov-file",
       demo:"https://github.com/mynteshav/Job-Market-Salary-Trends-Dashboard-Power-BI-/blob/main/images/screenshot_dashboard.PNG"
@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
       title: "Predict Calorie Expenditure Using XGBoost",
       category: "machine-learning",
       description: "Developed a regression model to predict calorie expenditure using XGBoost, incorporating various health metrics and activity data.",
-      image: "/predict-calorie.jpeg",
+      image: `${import.meta.env.BASE_URL}predict-calorie.jpeg`,
       technologies: ["Python", "XGBoost", "Pandas", "Scikit-learn", "Matplotlib"],
       github: "https://github.com/mynteshav/Calorie-Expenditure"
     },
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
       title: "Flipkart Product Pricing Strategy",
       category: "data-analysis",
       description: "Analyzed product pricing data from Flipkart to identify optimal pricing strategies using regression models and market basket analysis.",
-      image: "/Flipkart-price.png",
+      image: `${import.meta.env.BASE_URL}Flipkart-price.png`,
       technologies: ["Python", "Regression Models", "Pandas", "NumPy", "Tableau"],
       github: "https://github.com/mynteshav/Flipkart-product-pricing"
     },
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
       title: "Predict Holiday Package Using XGBoost",
       category: "machine-learning",
       description: "Built a recommendation system using XGBoost to predict and suggest personalized holiday packages based on customer preferences.",
-      image: "/pexels-photo.jpg",
+      image: `${import.meta.env.BASE_URL}pexels-photo.jpg`,
       technologies: ["Python", "XGBoost", "Pandas", "NumPy", "Scikit-learn"],
       github: "https://github.com/mynteshav/Predict-Holiday-Package-Using-XGBoost"
     },
@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
       title: "Customer Segmentation System",
       category: "machine-learning",
       description: "Developed a customer segmentation system using K-means clustering to identify distinct customer groups for targeted marketing.",
-      image: "/customer-segmentation.png",
+      image: `${import.meta.env.BASE_URL}customer-segmentation.png`,
       technologies: ["Python", "Scikit-learn", "Pandas", "Matplotlib", "Seaborn"],
       github: "https://github.com/mynteshav/CodeClause_Customer_Segmentation_system2.ipynb"
     },
@@ -84,7 +84,7 @@ const Projects: React.FC = () => {
       title: "Store Management System",
       category: "web-app",
       description: "Created a database-driven store management application to streamline inventory tracking, sales processing, and reporting.",
-      image: "/store.png",
+      image: `${import.meta.env.BASE_URL}store.png`,
       technologies: ["Python", "Django", "PostgreSQL", "HTML/CSS", "JavaScript"],
       github: "https://github.com/mynteshav/Store-management-System"
     }, 

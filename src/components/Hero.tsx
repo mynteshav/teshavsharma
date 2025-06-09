@@ -8,10 +8,10 @@ interface NavbarProps {
   toggleDarkMode: () => void;
 }
 const floatingIcons = [
-  { src: '/Python_logo.png', delay: 0.3, top: '30%', right: '-2%', label: 'Python' },
-  { src: '/SQL_logo.png', delay: 0.4, top: '40%', right: '-2%', label: 'SQL' },
+  { src: `${import.meta.env.BASE_URL}Python_logo.png`, delay: 0.3, top: '30%', right: '-2%', label: 'Python' },
+  { src: `${import.meta.env.BASE_URL}SQL_logo.png`, delay: 0.4, top: '40%', right: '-2%', label: 'SQL' },
   { Icon: Brain, delay: 0.5, top: '50%', right: '-2%', label: 'ML', className: 'text-gray-800 dark:text-white' },
-  { src: '/Power BI_logo.png', delay: 0.8, top: '60%', right: '-2%', label: 'Power BI' },
+  { src: `${import.meta.env.BASE_URL}Power BI_logo.png`, delay: 0.8, top: '60%', right: '-2%', label: 'Power BI' },
 ];
 
 const SocialLinks: React.FC = () => {
@@ -38,8 +38,8 @@ const SocialLinks: React.FC = () => {
       url: 'https://kaggle.com/teshavsharma',
       icon: (
         <>
-          <img src="/kaggle_logo_light.png" alt="Kaggle Light" className="w-7 h-7 dark:hidden transition-transform duration-300 group-hover:scale-125" />
-          <img src="/kaggle_logo_dark.png" alt="Kaggle Dark" className="w-7 h-7 hidden dark:block transition-transform duration-300 group-hover:scale-125" />
+          <img src={`${import.meta.env.BASE_URL}kaggle_logo_light.png`} alt="Kaggle Light" className="w-7 h-7 dark:hidden transition-transform duration-300 group-hover:scale-125" />
+          <img src={`${import.meta.env.BASE_URL}kaggle_logo_dark.png`} alt="Kaggle Dark" className="w-7 h-7 hidden dark:block transition-transform duration-300 group-hover:scale-125" />
         </>
       ),
     },
@@ -90,7 +90,7 @@ const Hero: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-gray-900/90 to-gray-900/60 z-10" />
           <img
-            src="/updated_profile_image.png"
+            src={`${import.meta.env.BASE_URL}updated_profile_image.png`}
             alt=""
             className="w-full h-full object-cover object-center opacity-70"
           />
@@ -360,7 +360,7 @@ const Hero: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                   ></div>
                   <div className="relative z-10" style={{ width: '400px', height: '680px',right:'130px',top:'11px'}}>
                     <img
-                      src="/updated_profile_image.png"
+                      src={`${import.meta.env.BASE_URL}updated_profile_image.png`}
                       alt="Teshav Sharma"
                       className="w-full h-full object-cover"
                     />
@@ -375,7 +375,7 @@ const Hero: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
                     }}
                   >
                     <img
-                      src="/arrow-white.png"
+                      src={`${import.meta.env.BASE_URL}arrow-white.png`}
                       alt="Arrow"
                       className="object-contain w-full h-full dark:invert"
                     /> 
