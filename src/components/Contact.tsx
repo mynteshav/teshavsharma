@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      const response = await axios.post('http://localhost:5000/api/contact', formData);
+      const response = await axios.post('https://teshav-contact.onrender.com/api/contact', formData);
       setSubmitMessage({
         type: 'success',
         text: response.data.message
