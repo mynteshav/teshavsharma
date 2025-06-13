@@ -2,28 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './utils/animations.css';
+/* Smooth scrolling for the entire document */
+html {
+  scroll-behavior: smooth;
+}
 
-@layer base {
+/* Enhanced smooth scrolling with custom easing */
+@media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
   }
-
-  body {
-    @apply font-sans antialiased text-gray-900 dark:text-gray-100;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold leading-tight;
-  }
-
-  section {
-    @apply scroll-mt-20;
+  
+  * {
+    scroll-behavior: smooth;
   }
 }
 
-@layer utilities {
-  .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
+/* Ensure smooth scrolling works on all browsers */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ec4899, #8b5cf6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #db2777, #7c3aed);
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: scroll-behavior 0.3s ease;
 }

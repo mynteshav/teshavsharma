@@ -1,6 +1,20 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
 
+const smoothScrollTo = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  if (element) {
+    const headerOffset = 80;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -9,30 +23,51 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#hero" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+            <button 
+              onClick={() => smoothScrollTo('hero')} 
+              className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 hover:scale-105 transition-transform duration-300"
+            >
               TS
-            </a>
+            </button>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            <a href="#hero" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            <button 
+              onClick={() => smoothScrollTo('hero')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               Home
-            </a>
-            <a href="#about" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            </button>
+            <button 
+              onClick={() => smoothScrollTo('about')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               About
-            </a>            
-            <a href="#projects" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            </button>            
+            <button 
+              onClick={() => smoothScrollTo('projects')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               Projects
-            </a>
-            <a href="#journey" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            </button>
+            <button 
+              onClick={() => smoothScrollTo('journey')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               Experience
-            </a>
-            <a href="#skills" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            </button>
+            <button 
+              onClick={() => smoothScrollTo('skills')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               Skills
-            </a>
-            <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors">
+            </button>
+            <button 
+              onClick={() => smoothScrollTo('contact')} 
+              className="text-gray-600 dark:text-gray-400 hover:text-pink-600 dark:hover:text-purple-400 transition-colors"
+            >
               Contact
-            </a>
+            </button>
           </div>
 
           <div className="mt-6 md:mt-0">

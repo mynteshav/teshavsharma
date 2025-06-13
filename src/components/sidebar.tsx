@@ -74,13 +74,24 @@ const Sidebar: React.FC<SidebarProps> = ({
     { icon: Mail, label: 'Contact', href: 'contact' },
   ];
 
+  const smoothScrollTo = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+  
   const handleClick = (href: string) => {
-    const section = document.getElementById(href);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-      if (isMobile) {
-        setTimeout(onClose, 400);
-      }
+    smoothScrollTo(href);
+    if (isMobile) {
+      setTimeout(onClose, 400);
     }
   };
 

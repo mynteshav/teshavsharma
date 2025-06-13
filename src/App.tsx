@@ -18,12 +18,12 @@ function App() {
     setDarkMode(prefersDarkMode);
 
     const observer = new IntersectionObserver(
-      (entries) => {
+      (entries: IntersectionObserverEntry[]) => {
         // Find the entry with the highest intersection ratio
         let maxRatio = 0;
-        let activeEntry = null;
+        let activeEntry: IntersectionObserverEntry | null = null;
 
-        entries.forEach((entry) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
           if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
             maxRatio = entry.intersectionRatio;
             activeEntry = entry;
@@ -31,8 +31,11 @@ function App() {
         });
 
         // If we found an active entry, update the active section
-        if (activeEntry) {
-          setActiveSection(activeEntry.target.id);
+        if (activeEntry && activeEntry.target instanceof Element) {
+          const targetId = activeEntry.target.getAttribute('id');
+          if (targetId) {
+            setActiveSection(targetId);
+          }
         }
       },
       { 
