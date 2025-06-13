@@ -77,7 +77,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   const smoothScrollTo = (elementId: string) => {
     const element = document.getElementById(elementId);
     if (element) {
-      const headerOffset = 80;
+      const headerOffset = 0;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -89,7 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   };
   
   const handleClick = (href: string) => {
-    smoothScrollTo(href);
+    smoothScrollTo(href); // Use custom scroll
     if (isMobile) {
       setTimeout(onClose, 400);
     }
